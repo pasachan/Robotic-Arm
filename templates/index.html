@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotic Arm Control</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Robotic Arm Control</h2>
+  <div class="page">
+    <div>
+      <div class="control">
+        <h3>Base Motor</h3>
+        <button class="Button" onclick="sendCommand('base', 'forward')">Forward</button>
+        <button class="backButton" onclick="sendCommand('base', 'backward')">Backward</button>
+        <span id="baseAngle">90°</span>
+      </div>
+
+      <div class="control">
+        <h3>Link1 Motor</h3>
+        <button class="Button" onclick="sendCommand('link1', 'forward')">Forward</button>
+        <button class="backButton" onclick="sendCommand('link1', 'backward')">Backward</button>
+        <span id="link1Angle">90°</span>
+      </div>
+
+      <div class="control">
+        <h3>Link2 Motor</h3>
+        <button class="Button" onclick="sendCommand('link2', 'forward')">Forward</button>
+        <button class="backButton" onclick="sendCommand('link2', 'backward')">Backward</button>
+        <span id="link2Angle">90°</span>
+      </div>
+
+      <div class="control">
+        <h3>Gripper Motor</h3>
+        <button class="Button" onclick="sendCommand('gripper', 'forward')">Forward</button>
+        <button class="backButton" onclick="sendCommand('gripper', 'backward')">Backward</button>
+        <span id="gripperAngle">90°</span>
+      </div>
+
+      <div class="control">
+        <button class="Button" onclick="resetAll()">Reset All</button>
+      </div>
+
+      <!-- Add a Pick button -->
+    </div>
+    <div>
+      <h3>Camera Control</h3>
+      <div class="control">
+        <button class="Button" onclick="performPick()">Pick Object</button>
+      </div>
+      <div class="control">
+        <button class="backButton" onclick="performPlace()">Place Object</button>
+      </div>
+    </div>
+    <div>
+      <h3>Camera Feed</h3>
+      <img src="/video_feed" width="640" height="480" alt="Camera Feed">
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

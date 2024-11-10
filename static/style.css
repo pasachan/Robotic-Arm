@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Sofia Bold';
+  src: url('./sofia_bold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Sofia Bold';
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+h2 {
+  color: #333;
+}
+
+.control {
+  margin: 20px;
+}
+
+.Button {
+  font-family: 'Sofia Bold';
+  padding:10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:20px;
+  background-color: #02cf27;
+  font-family:sans-serif;
+  border-style: solid;
+  border-color: #02cf27;
+  color: white;
+  transition: 500ms;
+}
+
+.backButton {
+  font-family: 'Sofia Bold';
+  padding:10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:20px;
+  background-color: red; 
+  font-family: 'Sofia Bold', sans-serif;
+  border-style: solid;
+  border-color: red;
+  color: white;
+  transition: 500ms;
+}
+.backButton:hover{
+background-color:white;
+color:red ;
+}
+.Button:hover{
+  background-color:white;
+  color:#02cf27
+}
+span {
+  font-weight: bold;
+}
+
+#resetButton {
+  font-family: 'Sofia Bold';
+  background-color: #ff6666;
+  color: white;
+  font-weight: bold;
+}
+
+.page {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 50px;
+}
+
