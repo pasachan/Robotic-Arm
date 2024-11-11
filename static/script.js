@@ -54,12 +54,32 @@ function performPlace() {
     .then(response => response.text())
     .then(data => {
       console.log(data);
-      document.getElementById('baseAngle').textContent = '20°';
+      document.getElementById('baseAngle').textContent = '10°';
       document.getElementById('link1Angle').textContent = '60°';
-      document.getElementById('gripperAngle').textContent = '180°';
+      document.getElementById('gripperAngle').textContent = '100°';
     });
 }
 
-
+function performPick2() {
+  fetch('/performPick2')
+    .then(response => response.text())
+    .then(data => {
+      console.log(data);
+      document.getElementById('baseAngle').textContent = '10°';
+      document.getElementById('link2Angle').textContent = '160°';
+      document.getElementById('link1Angle').textContent = '45°';
+      document.getElementById('gripperAngle').textContent = '15°';
+    });
+}
+function performPlace2() {
+  fetch('/performPlace2')
+    .then(response => response.text())
+    .then(data => {
+      console.log(data);
+      document.getElementById('baseAngle').textContent = '150°';
+      document.getElementById('link1Angle').textContent = '35°';
+      document.getElementById('gripperAngle').textContent = '100°';
+    });
+}
 
 

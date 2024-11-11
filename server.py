@@ -18,10 +18,10 @@ app = Flask(__name__)
 
 # Current angles for each servo motor
 angles = {
-    "base": 90,
-    "link2": 90,
-    "link1": 90,
-    "gripper": 90
+    "link2": 0,
+    "gripper": 0,
+    "link1": 0,
+    "base": 0,
 }
 
 
@@ -142,11 +142,35 @@ def performPlace():
     if ser and ser.is_open:
         ser.write("link1:60\n".encode())
         time.sleep(2)
-        ser.write("base:20\n".encode())
+        ser.write("base:10\n".encode())
         time.sleep(2)
         ser.write("link1:40\n".encode())
         time.sleep(2)
-        ser.write("gripper:180\n".encode())
+        ser.write("gripper:100\n".encode())
+    return "Place done"
+@app.route('/performPick2')
+def performPick2():
+    if ser and ser.is_open:
+        ser.write("base:10\n".encode())
+        time.sleep(2)
+        ser.write("gripper:100\n".encode())
+        time.sleep(2)
+        ser.write("link1:45\n".encode())
+        time.sleep(2)
+        ser.write("link2:160\n".encode())
+        time.sleep(2)
+        ser.write("gripper:15\n".encode())
+    return "Pickup done"
+@app.route('/performPlace2')
+def performPlace2():
+    if ser and ser.is_open:
+        ser.write("link1:55\n".encode())
+        time.sleep(2)
+        ser.write("base:150\n".encode())
+        time.sleep(2)
+        ser.write("link1:35\n".encode())
+        time.sleep(2)
+        ser.write("gripper:100\n".encode())
     return "Place done"
 # Route for video feed
 def generate_frames():
